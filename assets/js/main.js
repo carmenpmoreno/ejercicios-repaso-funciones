@@ -1,11 +1,20 @@
 'use strict';
 
-function ten(word, lenght) {
+// FUNCION DE APOYO:contador de números aleatorios
+const randomNumber = getRandomNumber(10);
+function getRandomNumber(max) {
+    return Math.ceil(Math.random() * max);
+  }
+
+
+
+function writeThis(word, lenght) {
     for (let i=0; i<lenght; i++) {
         console.log(word);
     }
 }
 
-ten ('Patata', 10);
-ten ('Aguacate', 20);
-ten('Pizza', 30);
+writeThis ('Patata', randomNumber);
+writeThis ('Aguacate', randomNumber);
+writeThis('Pizza', randomNumber);
+
