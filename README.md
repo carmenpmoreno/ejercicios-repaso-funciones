@@ -1,2 +1,2 @@
 # ejercicios-repaso-funciones
-Repo created to practice functions
+Created to practice vanilla JS functions
