@@ -2,7 +2,7 @@
 
 // FUNCION DE APOYO:contador de números aleatorios
 const randomNumber = getRandomNumber(10);
-console.log(randomNumber);
+// console.log(randomNumber);
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
   }
