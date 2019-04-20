@@ -21,7 +21,7 @@ const myWordList = [
     total: 4
   }
 ];
-
+// FUNCIÓN PEDIDA:
 function writeMyArray(array) {
   // con un bucle que recorra el array "myWordList"
   for (let i=0; i<array.length; i++) {
@@ -29,24 +29,16 @@ function writeMyArray(array) {
     const arrayWord = array[i].text;
     // número de veces a escribir cada palabra del array
     const textTotal = array[i].total;
-    // y ejecuto writeThis con estas constantes como parámetros
+    // y ejecuto la función writeThis con estas constantes como parámetros
     writeThis(arrayWord, textTotal);
   }
 }
+// EJECUTO FUNCIÓN
 writeMyArray(myWordList);
 
-// FUNCIÓN DE APOYO
+// FUNCIÓN DE APOYO "writeThis"
 function writeThis(word, lenght) {
   for (let i = 0; i < lenght; i++) {
     console.log(word);
   }
 }
-
-
-// FUNCION DE APOYO:contador de números aleatorios
-// console.log(randomNumber);
-// function getRandomNumber(max) {
-//   return Math.ceil(Math.random() * max);
-// }
-// const randomNumber = getRandomNumber(10);
-// console.log(randomNumber);
