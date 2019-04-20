@@ -1,6 +1,8 @@
 'use strict';
 
-//Nueva tarea: Array que queremos pintar en la consola
+//Nueva tarea: escribimos una nueva función que permite como parámetro un array con objetos y nos los recorre y usa la función writeThis para pintar en la consola cada palabra "text" del objeto un número de veces definido en cada objeto como "total"
+
+// Array que queremos pintar en la consola
 const myWordList = [
   {
     text: 'Pencil',
@@ -19,17 +21,26 @@ const myWordList = [
     total: 4
   }
 ];
-// escribimos una nueva función, la cual:
-function writeMyArray() {
-  // recorra el array "myWordList"
-  for (let i=0; i<myWordList.length; i++) {
-    const arrayWord = myWordList[i].text;
-    console.log(arrayWord);
+
+function writeMyArray(array) {
+  // con un bucle que recorra el array "myWordList"
+  for (let i=0; i<array.length; i++) {
+    // meto en una constante las palabras del array
+    const arrayWord = array[i].text;
+    // número de veces a escribir cada palabra del array
+    const textTotal = array[i].total;
+    // y ejecuto writeThis con estas constantes como parámetros
+    writeThis(arrayWord, textTotal);
   }
 }
-writeMyArray();
+writeMyArray(myWordList);
 
-
+// FUNCIÓN DE APOYO
+function writeThis(word, lenght) {
+  for (let i = 0; i < lenght; i++) {
+    console.log(word);
+  }
+}
 
 
 // FUNCION DE APOYO:contador de números aleatorios
