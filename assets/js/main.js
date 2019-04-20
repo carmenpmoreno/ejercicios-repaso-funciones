@@ -9,6 +9,9 @@ fetch ('https://raw.githubusercontent.com/oneeyedman/terms/master/terms.js')
  .then (function (data) {
     // console.log(data.results);
     writeMyArray(data.results);
+    // y si quiero que se me pinten en el html en el body:
+    const arrayWrited = writeMyArray(data.results);
+    document.body.innerHTML = arrayWrited;
  });
 
 
