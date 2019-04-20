@@ -1,13 +1,5 @@
 'use strict';
 
-// FUNCION DE APOYO:contador de números aleatorios
-// console.log(randomNumber);
-function getRandomNumber(max) {
-  return Math.ceil(Math.random() * max);
-}
-const randomNumber = getRandomNumber(10);
-console.log(randomNumber);
-
 //Nueva tarea: Array que queremos pintar en la consola
 const myWordList = [
   {
@@ -28,21 +20,22 @@ const myWordList = [
   }
 ];
 // escribimos una nueva función, la cual:
-function writeMyArray(word, lenght) {
+function writeMyArray() {
   // recorra el array "myWordList"
-  for (let i = 0; i < randomNumber; i++) {
-    console.log(myWordList[i]);
+  for (let i=0; i<myWordList.length; i++) {
+    const arrayWord = myWordList[i].text;
+    console.log(arrayWord);
   }
 }
-const arrayFunction = writeMyArray(myWordList, randomNumber);
+writeMyArray();
 
-// // FUNCION DE APOYO "writeThis"
 
-// function writeThis(word, lenght) {
-//   for (let i = 0; i < lenght; i++) {
-//     console.log(word);
-//   }
+
+
+// FUNCION DE APOYO:contador de números aleatorios
+// console.log(randomNumber);
+// function getRandomNumber(max) {
+//   return Math.ceil(Math.random() * max);
 // }
-
-// writeThis(arrayFunction, randomNumber);
-
+// const randomNumber = getRandomNumber(10);
+// console.log(randomNumber);
