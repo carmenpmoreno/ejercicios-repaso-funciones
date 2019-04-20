@@ -1,27 +1,18 @@
 'use strict';
 
-//Nueva tarea: escribimos una nueva función que permite como parámetro un array con objetos y nos los recorre y usa la función writeThis para pintar en la consola cada palabra "text" del objeto un número de veces definido en cada objeto como "total"
+//Nueva tarea: pintar los elementos del array obtenido de la API con URL: `https://raw.githubusercontent.com/oneeyedman/terms/master/terms.js`
 
-// Array que queremos pintar en la consola
-const myWordList = [
-  {
-    text: 'Pencil',
-    total: 6
-  },
-  {
-    text: 'Thermo',
-    total: 2
-  },
-  {
-    text: 'TV',
-    total: 8
-  },
-  {
-    text: 'Phone',
-    total: 4
-  }
-];
-// FUNCIÓN PEDIDA:
+fetch ('https://raw.githubusercontent.com/oneeyedman/terms/master/terms.js')
+ .then (function (response) {
+    return response.json();
+ })
+ .then (function (data) {
+    // console.log(data.results);
+    writeMyArray(data.results);
+ });
+
+
+// FUNCIÓN QUE RECORRE EL ARRAY "RESULTS" DE LA API:
 function writeMyArray(array) {
   // con un bucle que recorra el array "myWordList"
   for (let i=0; i<array.length; i++) {
@@ -33,8 +24,6 @@ function writeMyArray(array) {
     writeThis(arrayWord, textTotal);
   }
 }
-// EJECUTO FUNCIÓN
-writeMyArray(myWordList);
 
 // FUNCIÓN DE APOYO "writeThis"
 function writeThis(word, lenght) {
