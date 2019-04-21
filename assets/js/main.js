@@ -7,11 +7,7 @@ fetch ('https://raw.githubusercontent.com/oneeyedman/terms/master/terms.js')
     return response.json();
  })
  .then (function (data) {
-    // console.log(data.results);
     writeMyArray(data.results);
-    // y si quiero que se me pinten en el html en el body:
-    const arrayWrited = writeMyArray(data.results);
-    document.body.innerHTML = arrayWrited;
  });
 
 
@@ -31,6 +27,9 @@ function writeMyArray(array) {
 // FUNCIÓN DE APOYO "writeThis"
 function writeThis(word, lenght) {
   for (let i = 0; i < lenght; i++) {
+    function wordWritten (word){
+      document.body.innerHTML = word;
+    };
     console.log(word);
   }
 }
