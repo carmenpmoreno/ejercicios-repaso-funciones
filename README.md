@@ -1,2 +1,2 @@
 # ejercicios-repaso-funciones
-Created to practice vanilla JS functions
+Created to practice JS functions
